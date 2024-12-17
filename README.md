@@ -1,29 +1,29 @@
-# TRABAJO PRÁCTICO 1
+### TRABAJO	PRÁCTICO	2	
+## Materia:	Desarrollo	de	Sitios	Web	–	Fecha	límite	de	entrega	10/02/2025 
 
-### Materia: Desarrollo de Sitios Web  
-### Fecha límite de entrega: 28/10/2024
+# 1.1	 Consigna	
+Construcción y Maquetación de sitio web de acuerdo con las especificaciones definidas durante el TP1. 
 
-## 1.1 Consigna
+# 1.2	 Alcance	
+Para la aprobación del TP deberá completarse la sección portada del sitio y, en función del tamaño del grupo, N 
+secciones extras. Esto quiere decir que un grupo de 4 personas deberá maquetar Portada + 4 secciones internas 
+mientras que quien entregue el TP en forma individual deberá maquetar la portada y una única sección interna de su 
+elección. 
 
-**Construcción de sitio web ecommerce**
+# 1.3	 Requisitos	para	la	aprobación	
+• El sitio web, al igual que los wireframes definidos en la etapa previa,  debe ser responsivo para mínimo tres 
+dispositivos: Celular, Tablet y PC 
+• Se debe utilizar Bootstrap 5 
+• Se debe personalizar y recompilar el Theme de Bootstrap mediante Saas 
+• Debe utilizarse JavaScript y captura de eventos 
+• Deben utilizarse al menos 4 componentes JavaScript de Bootstrap 
+• El sitio debe ser SEO Friendly 
+• El sitio web debe estar subido a internet y ser navegable 
 
-### Concepto del proyecto
+# 1.4	 Detalles	de	presentación	del	TP	
+Deberá adjuntarse una carpeta con el proyecto web comprimida en formato ZIP, GZIP,  RAR o TAR con el siguiente nombre de 
+archivo: 
 
-- Definir el nombre del proyecto.
-- Escribir una breve descripción del sitio web, título, nombre y dominio elegido.
-- Escribir una breve descripción del objetivo del sitio web, público objetivo, temática del sitio y funciones principales que debe cumplir.
-- Realizar un mapa completo del sitio.
+DSW-2024-TP1-apellido-nombre.<extensión>. 
 
-### Estructura
-
-- Realizar un wireframe que represente la estructura básica de la página principal y al menos 3 secciones internas.
-- El sitio web debe ser responsivo para mínimo tres dispositivos: Celular, Tablet y PC.
-
-### Mockup/Prototipo
-
-Utilizando la herramienta de su preferencia deberá realizar un mockup de alta fidelidad o prototipo en el cual se incluyan elementos visuales, colores, tipografías y componentes que reflejen la estética final del sitio.
-
-## 1.2 Detalles de presentación del TP
-
-Deberá adjuntarse una carpeta con el proyecto web comprimida en formato ZIP, GZIP, RAR o TAR con el siguiente nombre de archivo: DSW-2024-TP1-apellido-nombre.<extensión>.
-
+En caso de realizar el TP en grupos, deberán realizar la entrega todos los integrantes del grupo (explicitar en el informe del TP los integrantes del mismo)
