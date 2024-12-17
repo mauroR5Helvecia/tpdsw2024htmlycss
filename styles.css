@@ -1,0 +1,146 @@
+@charset "UTF-8";
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0; }
+
+header a, footer a {
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  /* Hace que el navbar esté fijo */
+  top: 0;
+  /* Lo coloca en la parte superior de la página */
+  left: 0;
+  width: 100%;
+  /* Asegura que ocupe todo el ancho de la pantalla */
+  z-index: 1000;
+  /* Asegura que el navbar se quede por encima de otros elementos */
+  background-color: #fff;
+  /* Establece un fondo blanco, para que no se mezcle con el contenido */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Añade una sombra ligera para darle un efecto de separación */
+  padding: 10px 0;
+  /* Opcional: Agrega algo de espacio alrededor */ }
+
+body {
+  padding-top: 70px;
+  /* Espacio suficiente para que el contenido no quede debajo del navbar */ }
+
+.nav-link {
+  text-decoration: none; }
+  .nav-link:hover {
+    text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #051564; }
+
+header .logo {
+  width: 140px;
+  padding-left: 5%;
+  padding-right: 10%; }
+header .nav-link {
+  color: #28a745;
+  font-weight: bold; }
+  header .nav-link:hover {
+    text-decoration: underline; }
+
+.hero {
+  padding: 1rem;
+  text-align: center; }
+  .hero h1 {
+    color: #051564;
+    font-size: 2rem; }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+footer {
+  padding: 1rem;
+  background-color: #6c757d; }
+  footer h5 {
+    color: #28a745; }
+
+.info h2 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center; }
+
+.imagen-fondo {
+  background-image: url("img/img02.png");
+  opacity: 0.7;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media (max-width: 768px) {
+    .imagen-fondo {
+      height: 200px; } }
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal; }
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal; }
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal; }
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal; }
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic; }
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic; }
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic; }
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic; }
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic; }
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic; }
+
+/*# sourceMappingURL=styles.css.map */

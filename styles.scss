@@ -1,0 +1,133 @@
+// Variables globales
+$primary-color: #28a745;
+$secondary-color: #6c757d;
+$dark-blue: #051564; // Azul oscuro
+$font-family: "Roboto", sans-serif;
+
+$default-padding: 1rem;
+$hero-font-size: 2rem;
+
+// Global Styles
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+}
+
+header a, footer a {
+    text-decoration: none;
+}
+
+header {
+    position: fixed;  /* Hace que el navbar esté fijo */
+    top: 0;           /* Lo coloca en la parte superior de la página */
+    left: 0;
+    width: 100%;      /* Asegura que ocupe todo el ancho de la pantalla */
+    z-index: 1000;    /* Asegura que el navbar se quede por encima de otros elementos */
+    background-color: #fff; /* Establece un fondo blanco, para que no se mezcle con el contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para darle un efecto de separación */
+    padding: 10px 0;  /* Opcional: Agrega algo de espacio alrededor */
+}
+
+body {
+    padding-top: 70px; /* Espacio suficiente para que el contenido no quede debajo del navbar */
+}
+
+.nav-link {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Titulares en azul oscuro
+h1, h2, h3, h4, h5, h6 {
+    color: $dark-blue;
+}
+
+// Header
+header {
+    .logo {
+        width: 140px;
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+
+    .nav-link {
+        color: $primary-color;
+        font-weight: bold; // Ya está en "fw-bold" del HTML
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Hero Section
+.hero {
+    padding: $default-padding;
+    text-align: center;
+
+    h1 {
+        color: $dark-blue;
+        font-size: $hero-font-size;
+    }
+}
+
+// Carousel Customizations
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+// Footer Styles
+footer {
+    padding: $default-padding;
+    background-color: $secondary-color;
+
+    h5 {
+        color: $primary-color;
+    }
+}
+
+// Título con espaciado centrado
+.info {
+    h2 {
+        margin-top: 3rem;    // Agrega margen superior
+        margin-bottom: 2rem; // Agrega margen inferior
+        text-align: center;  // Centra horizontalmente el texto
+    }
+}
+
+// Imagen de fondo
+.imagen-fondo {
+    background-image: url('img/img02.png');
+    opacity: 0.7;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        height: 200px;
+    }
+}
+
+// Tipografías Roboto
+.roboto-thin { font-family: $font-family; font-weight: 100; font-style: normal; }
+.roboto-light { font-family: $font-family; font-weight: 300; font-style: normal; }
+.roboto-regular { font-family: $font-family; font-weight: 400; font-style: normal; }
+.roboto-medium { font-family: $font-family; font-weight: 500; font-style: normal; }
+.roboto-bold { font-family: $font-family; font-weight: 700; font-style: normal; }
+.roboto-black { font-family: $font-family; font-weight: 900; font-style: normal; }
+
+.roboto-thin-italic { font-family: $font-family; font-weight: 100; font-style: italic; }
+.roboto-light-italic { font-family: $font-family; font-weight: 300; font-style: italic; }
+.roboto-regular-italic { font-family: $font-family; font-weight: 400; font-style: italic; }
+.roboto-medium-italic { font-family: $font-family; font-weight: 500; font-style: italic; }
+.roboto-bold-italic { font-family: $font-family; font-weight: 700; font-style: italic; }
+.roboto-black-italic { font-family: $font-family; font-weight: 900; font-style: italic; }
