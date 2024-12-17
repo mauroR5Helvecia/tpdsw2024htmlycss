@@ -26,7 +26,6 @@ header {
     z-index: 1000;    /* Asegura que el navbar se quede por encima de otros elementos */
     background-color: #fff; /* Establece un fondo blanco, para que no se mezcle con el contenido */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para darle un efecto de separación */
-    padding: 10px 0;  /* Opcional: Agrega algo de espacio alrededor */
 }
 
 body {
@@ -74,6 +73,15 @@ header {
     }
 }
 
+#info_intro {
+    padding-top: 25px ;
+}
+
+#info_detalle{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 // Carousel Customizations
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -93,7 +101,7 @@ footer {
 // Título con espaciado centrado
 .info {
     h2 {
-        margin-top: 3rem;    // Agrega margen superior
+        margin-top: 2rem;    // Agrega margen superior
         margin-bottom: 2rem; // Agrega margen inferior
         text-align: center;  // Centra horizontalmente el texto
     }
@@ -114,6 +122,49 @@ footer {
 
     @media (max-width: 768px) {
         height: 200px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .info .row {
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+        align-items: center;   /* Centra los elementos */
+    }
+
+    .info .col-md-6 {
+        width: 100%; /* Hace que los elementos ocupen todo el ancho de la columna */
+        margin-bottom: 20px; /* Añade un pequeño espacio entre el video y el texto */
+    }
+
+    .info iframe {
+        width: 100% !important; /* Asegura que el iframe ocupe todo el ancho de la pantalla */
+        height: 300px; /* Ajusta la altura según prefieras */
+    }
+
+    .info h2, .info p {
+        text-align: center; /* Centra el texto */
+    }
+}
+
+// Ajuste para pantallas grandes Video de YouTube (1300px o más)
+@media (min-width: 1300px) {
+.info iframe {
+    width: 80%; /* Ajusta el tamaño del video para que no ocupe todo el ancho */
+    max-height: 500px; /* Ajusta la altura máxima para evitar desproporciones */
+    margin-top: 3em; /* Espacio debajo del video */
+    }
+}
+
+// Ajuste específico para pantallas de 1300px o menores, donde el video irá arriba y el texto abajo
+@media (max-width: 1300px) {
+    .info {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección de los elementos */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .info iframe {
+        order: -1; /* Coloca el video arriba */
     }
 }
 

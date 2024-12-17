@@ -34,26 +34,26 @@
                 <a class="nav-link active" aria-current="page" href="#">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Productos</a>
+                <a class="nav-link" href="#productos">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Blog</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Calculadora</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+              </li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <form class="d-flex" action="https://www.google.com/search" method="GET" target="_blank">
+                <input class="form-control me-2" type="text" name="q" placeholder="Ingresa tu búsqueda" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
           </div>
         </div>
       </nav>
-    <div class="container d-flex justify-content-between align-items-center">
-        
-        <!-- Botón de hamburguesa (aparece en pantallas pequeñas) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
+
     <!-- Menú de navegación -->
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
@@ -74,7 +74,10 @@
                     <img src="img/img01.png" alt="Energías renovables" class="img-fluid">
                 </div>
                 <div class="col-md-6">
-                    <h1 class="fw-bold">"No dejes para mañana la energía que puedes ahorrar hoy."</h1>
+                    <h1 class="fw-bold">"No dejes para mañana la energía que podes ahorrar hoy."</h1>
+                    <p id="info_intro"><strong>Las energías renovables: una oportunidad para tu PyME</strong></p>
+                    <p>Las energías renovables, como la solar, están transformando la manera en que las pequeñas y medianas empresas consumen y producen energía. Estas fuentes son limpias, sostenibles y representan una solución estratégica para reducir costos operativos, mejorar la eficiencia energética y contribuir activamente a la lucha contra el cambio climático.</p>
+                    
                 </div>
             </div>
         </div>
@@ -85,19 +88,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <iframe 
-                        class="w-100" 
-                        height="315" 
-                        src="https://www.youtube.com/embed/VIDEO_ID" 
-                        title="Video sobre energías renovables" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                    </iframe>
+                    <div style="background-color: white; position: relative; padding-bottom: 56.25%; height: 0;">
+                        <iframe 
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                            src="https://www.youtube.com/embed/DjQ_ZMKUxuE?autoplay=1&mute=1&loop=1&playlist=DjQ_ZMKUxuE&rel=0&iv_load_policy=3" 
+                            title="Video sobre energías renovables" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <h2 class="fw-bold">¿Por qué elegir energías renovables?</h2>
-                    <p>Las energías renovables, como la solar, eólica e hidráulica, están revolucionando la forma en que consumimos y producimos energía. Son limpias, sostenibles y ayudan a combatir el cambio climático.</p>
+                    <p id="info_detalle">Las energías renovables, como la solar, eólica e hidráulica, están transformando la manera en que las pequeñas y medianas empresas obtienen su energía. A diferencia de los combustibles fósiles, estas fuentes son inagotables y amigables con el medio ambiente, lo que permite reducir significativamente las emisiones de carbono mientras se optimizan los costos operativos.</p>
+                    <p id="info_detalle">En <strong>EcoPower</strong>, entendemos las necesidades específicas de las PYMEs y ofrecemos soluciones a medida para ayudarlas a adoptar tecnologías limpias que impulsen su competitividad. Desde la instalación de paneles solares hasta sistemas de energía eólica, nuestras soluciones no solo disminuyen el gasto energético a largo plazo, sino que también mejoran la imagen corporativa y contribuyen a un futuro más sostenible. Transformar tu PyME con energías renovables es una inversión estratégica que beneficia tanto a tu negocio como al planeta.</p>
                 </div>
             </div>
         </div>
