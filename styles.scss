@@ -215,9 +215,14 @@ footer {
     }
 }
 
+#marca_diferencia {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
 // Imagen de fondo
 .imagen-fondo {
-    background-image: url('img/imgFondo.png');
+    background-image: url('img/index/imgFondo.png');
     opacity: 0.7;
     background-size: cover;
     background-position: center;
@@ -278,9 +283,8 @@ footer {
 
 // Estilos pagina contacto
 
-.contacto-title{
+.contacto-title, #titulo_2_index {
     color: $primary-color;
-
 }
 
 .contacto-subtitle{
@@ -297,10 +301,6 @@ footer {
     height: auto;  
     margin: 0 auto; 
 }
-
-
-
-
 
 // Tipografías Roboto
 .roboto-thin { font-family: $font-family; font-weight: 100; font-style: normal; }
