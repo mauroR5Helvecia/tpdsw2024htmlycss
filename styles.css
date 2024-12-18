@@ -155,11 +155,10 @@ header .nav-link {
 @media (max-width: 576px) {
   .hero .img-container img {
     width: 275px;
-    height: 2px;
     object-fit: cover; }
 
   .hero .img-container {
-    height: 250px; } }
+    height: 275px; } }
 /* Estilos para el contenedor de texto */
 .hero .col-md-6 {
   display: flex;
