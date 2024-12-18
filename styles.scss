@@ -276,6 +276,32 @@ footer {
     }
 }
 
+// Estilos pagina contacto
+
+.contacto-title{
+    color: $primary-color;
+
+}
+
+.contacto-subtitle{
+    color: $dark-blue;
+    opacity: 80%;
+    font-size: 1.2rem;
+    max-width: 600px; 
+    margin: 0 auto; 
+    line-height: 1.5
+}
+
+.contacto-icon img {
+    max-width: 40px; 
+    height: auto;  
+    margin: 0 auto; 
+}
+
+
+
+
+
 // Tipografías Roboto
 .roboto-thin { font-family: $font-family; font-weight: 100; font-style: normal; }
 .roboto-light { font-family: $font-family; font-weight: 300; font-style: normal; }
