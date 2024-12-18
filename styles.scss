@@ -1,6 +1,6 @@
 // Variables globales
 $primary-color: #28a745;
-$secondary-color: #6c757d;
+$secondary-color: #397747;
 $dark-blue: #051564; // Azul oscuro
 $font-family: "Roboto", sans-serif;
 
@@ -62,6 +62,23 @@ header {
     }
 }
 
+.nav-link {
+    color: $primary-color;  /* Color del enlace normal */
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: $primary-color; /* Mantiene el color después de haber sido visitado */
+    }
+
+    &:active {
+        color: black; /* Color del enlace cuando está activo (clickeado) */
+    }
+}
+
 // Hero Section
 .hero {
     padding: $default-padding;
@@ -71,6 +88,98 @@ header {
         color: $dark-blue;
         font-size: $hero-font-size;
     }
+}
+
+/* Estilo para las imágenes dentro del contenedor .img-container */
+.hero .img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+    overflow: hidden; /* Oculta las imágenes que excedan el área */
+    width: 100%; /* Se ajusta al contenedor */
+}
+
+.hero .img-container img {
+    object-fit: cover; /* Mantiene la proporción de las imágenes */
+    opacity: 0; /* Hace que las imágenes estén inicialmente invisibles */
+    transition: opacity 2s ease-in-out; /* Transición suave de opacidad */
+}
+
+.hero .img-container img.fade-in {
+    opacity: 1; /* Hace que la imagen con clase fade-in sea visible */
+}
+
+/* Estilo para las imágenes dentro del contenedor .img-container */
+.hero .img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    width: 100%; /* Se ajusta al 100% del contenedor padre */
+    height: 500px; /* Fija una altura para que las imágenes no sobresalgan */
+    position: relative; /* Necesario para manejar el contenido dentro de este contenedor */
+}
+
+/* Estilo de las imágenes */
+.hero .img-container img {
+    width: 500px; /* Establece el tamaño de las imágenes a 500x500px */
+    height: 500px; /* Asegura que las imágenes tengan el tamaño deseado */
+    object-fit: cover; /* Asegura que las imágenes llenen el contenedor sin distorsionarse */
+    opacity: 0; /* Hace que las imágenes estén inicialmente invisibles */
+    transition: opacity 2s ease-in-out; /* Transición suave de opacidad */
+    position: absolute; /* Asegura que las imágenes no afecten el flujo normal del documento */
+    top: 0; /* Coloca las imágenes en la parte superior del contenedor */
+    left: 50%; /* Centra las imágenes horizontalmente */
+    transform: translateX(-50%); /* Centra las imágenes exactamente en el medio */
+}
+
+/* Imagen activa con la clase fade-in */
+.hero .img-container img.fade-in {
+    opacity: 1; /* Hace que la imagen con clase fade-in sea visible */
+}
+
+/* Ajustes para tablets y pantallas más pequeñas */
+@media (max-width: 768px) {
+    .hero .img-container img {
+        width: 300px; /* Reducimos el tamaño */
+        height: 300px; /* Mantiene la proporción */
+        object-fit: cover; /* Asegura que no se deformen */
+    }
+
+    /* Ajustamos el contenedor de imágenes */
+    .hero .img-container {
+        height: 300px; /* Ajustamos la altura del contenedor */
+    }
+
+    /* Opcional: espacio adicional para el texto */
+    .hero .col-md-6 {
+        margin-bottom: 20px; /* Espacio adicional para tablets */
+    }
+}
+
+/* Ajustes para pantallas aún más pequeñas (opcional, móviles) */
+@media (max-width: 576px) {
+    .hero .img-container img {
+        width: 275px;
+        height: 2px;
+        object-fit: cover;
+    }
+
+    .hero .img-container {
+        height: 250px;
+    }
+}
+
+/* Estilos para el contenedor de texto */
+.hero .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido dentro de la columna */
+    align-items: flex-start; /* Alinea el texto al inicio */
+    height: auto; /* Ajusta la altura al contenido */
+    margin-bottom: 30px; /* Asegura que haya un pequeño espacio entre el texto y la imagen */
 }
 
 #info_intro {
@@ -109,7 +218,7 @@ footer {
 
 // Imagen de fondo
 .imagen-fondo {
-    background-image: url('img/img02.png');
+    background-image: url('img/imgFondo.png');
     opacity: 0.7;
     background-size: cover;
     background-position: center;
