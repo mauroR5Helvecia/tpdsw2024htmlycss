@@ -101,6 +101,21 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
+    .hero .img-container img {
+        position: absolute; /* Coloca las imágenes una encima de la otra */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0; /* Oculta todas las imágenes inicialmente */
+        transition: opacity 1s ease-in-out; /* Añade una transición suave */
+      }
+      
+      .hero .img-container img.fade-in {
+        opacity: 1; /* Hace visible la imagen activa */
+        z-index: 1; /* Asegura que la imagen activa esté encima */
+      }      
+
     @media (max-width: 768px) {
         .img-container {
             height: 300px; /* Ajustamos la altura del contenedor */
