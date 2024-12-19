@@ -12,9 +12,10 @@ body {
     font-family: $font-family;
     margin: 0;
     padding: 0;
+    padding-top: 70px; /* Espacio suficiente para que el contenido no quede debajo del navbar */
 }
 
-header a, footer a {
+header a, footer a, .nav-link {
     text-decoration: none;
 }
 
@@ -26,27 +27,7 @@ header {
     z-index: 1000;    /* Asegura que el navbar se quede por encima de otros elementos */
     background-color: #fff; /* Establece un fondo blanco, para que no se mezcle con el contenido */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para darle un efecto de separación */
-}
 
-body {
-    padding-top: 70px; /* Espacio suficiente para que el contenido no quede debajo del navbar */
-}
-
-.nav-link {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-    }
-}
-
-// Titulares en azul oscuro
-h1, h2, h3, h4, h5, h6 {
-    color: $dark-blue;
-}
-
-// Header
-header {
     .logo {
         width: 140px;
         padding-left: 5%;
@@ -64,7 +45,6 @@ header {
 
 .nav-link {
     color: $primary-color;  /* Color del enlace normal */
-    text-decoration: none;
     
     &:hover {
         text-decoration: underline;
@@ -79,6 +59,11 @@ header {
     }
 }
 
+// Titulares en azul oscuro
+h1, h2, h3, h4, h5, h6 {
+    color: $dark-blue;
+}
+
 // Hero Section
 .hero {
     padding: $default-padding;
@@ -88,97 +73,68 @@ header {
         color: $dark-blue;
         font-size: $hero-font-size;
     }
-}
 
-/* Estilo para las imágenes dentro del contenedor .img-container */
-.hero .img-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    align-items: center; /* Centra las imágenes verticalmente */
-    overflow: hidden; /* Oculta las imágenes que excedan el área */
-    width: 100%; /* Se ajusta al contenedor */
-}
+    .img-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* Centra las imágenes horizontalmente */
+        align-items: center; /* Centra las imágenes verticalmente */
+        overflow: hidden; /* Oculta las imágenes que excedan el área */
+        width: 100%; /* Se ajusta al contenedor */
+        height: 500px; /* Fija una altura para que las imágenes no sobresalgan */
+        position: relative; /* Necesario para manejar el contenido dentro de este contenedor */
 
-.hero .img-container img {
-    object-fit: cover; /* Mantiene la proporción de las imágenes */
-    opacity: 0; /* Hace que las imágenes estén inicialmente invisibles */
-    transition: opacity 2s ease-in-out; /* Transición suave de opacidad */
-}
+        img {
+            width: 500px; /* Establece el tamaño de las imágenes a 500x500px */
+            height: 500px; /* Asegura que las imágenes tengan el tamaño deseado */
+            object-fit: cover; /* Asegura que las imágenes llenen el contenedor sin distorsionarse */
+            opacity: 0; /* Hace que las imágenes estén inicialmente invisibles */
+            transition: opacity 2s ease-in-out; /* Transición suave de opacidad */
+            position: absolute; /* Asegura que las imágenes no afecten el flujo normal del documento */
+            top: 0; /* Coloca las imágenes en la parte superior del contenedor */
+            left: 50%; /* Centra las imágenes horizontalmente */
+            transform: translateX(-50%); /* Centra las imágenes exactamente en el medio */
 
-.hero .img-container img.fade-in {
-    opacity: 1; /* Hace que la imagen con clase fade-in sea visible */
-}
-
-/* Estilo para las imágenes dentro del contenedor .img-container */
-.hero .img-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    align-items: center; /* Centra las imágenes verticalmente */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
-    width: 100%; /* Se ajusta al 100% del contenedor padre */
-    height: 500px; /* Fija una altura para que las imágenes no sobresalgan */
-    position: relative; /* Necesario para manejar el contenido dentro de este contenedor */
-}
-
-/* Estilo de las imágenes */
-.hero .img-container img {
-    width: 500px; /* Establece el tamaño de las imágenes a 500x500px */
-    height: 500px; /* Asegura que las imágenes tengan el tamaño deseado */
-    object-fit: cover; /* Asegura que las imágenes llenen el contenedor sin distorsionarse */
-    opacity: 0; /* Hace que las imágenes estén inicialmente invisibles */
-    transition: opacity 2s ease-in-out; /* Transición suave de opacidad */
-    position: absolute; /* Asegura que las imágenes no afecten el flujo normal del documento */
-    top: 0; /* Coloca las imágenes en la parte superior del contenedor */
-    left: 50%; /* Centra las imágenes horizontalmente */
-    transform: translateX(-50%); /* Centra las imágenes exactamente en el medio */
-}
-
-/* Imagen activa con la clase fade-in */
-.hero .img-container img.fade-in {
-    opacity: 1; /* Hace que la imagen con clase fade-in sea visible */
-}
-
-/* Ajustes para tablets y pantallas más pequeñas */
-@media (max-width: 768px) {
-    .hero .img-container img {
-        width: 300px; /* Reducimos el tamaño */
-        height: 300px; /* Mantiene la proporción */
-        object-fit: cover; /* Asegura que no se deformen */
+            &.fade-in {
+                opacity: 1; /* Hace que la imagen con clase fade-in sea visible */
+            }
+        }
     }
 
-    /* Ajustamos el contenedor de imágenes */
-    .hero .img-container {
-        height: 300px; /* Ajustamos la altura del contenedor */
+    @media (max-width: 768px) {
+        .img-container {
+            height: 300px; /* Ajustamos la altura del contenedor */
+
+            img {
+                width: 300px; /* Reducimos el tamaño */
+                height: 300px; /* Mantiene la proporción */
+            }
+        }
+
+        /* Opcional: espacio adicional para el texto */
+        .col-md-6 {
+            margin-bottom: 20px; /* Espacio adicional para tablets */
+        }
     }
 
-    /* Opcional: espacio adicional para el texto */
-    .hero .col-md-6 {
-        margin-bottom: 20px; /* Espacio adicional para tablets */
-    }
-}
+    @media (max-width: 576px) {
+        .img-container {
+            height: 275px;
 
-/* Ajustes para pantallas aún más pequeñas (opcional, móviles) */
-@media (max-width: 576px) {
-    .hero .img-container img {
-        width: 275px;
-        object-fit: cover;
+            img {
+                width: 275px;
+            }
+        }
     }
 
-    .hero .img-container {
-        height: 275px;
+    .col-md-6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra el contenido dentro de la columna */
+        align-items: flex-start; /* Alinea el texto al inicio */
+        height: auto; /* Ajusta la altura al contenido */
+        margin-bottom: 30px; /* Asegura que haya un pequeño espacio entre el texto y la imagen */
     }
-}
-
-/* Estilos para el contenedor de texto */
-.hero .col-md-6 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra el contenido dentro de la columna */
-    align-items: flex-start; /* Alinea el texto al inicio */
-    height: auto; /* Ajusta la altura al contenido */
-    margin-bottom: 30px; /* Asegura que haya un pequeño espacio entre el texto y la imagen */
 }
 
 #info_intro {
@@ -213,71 +169,48 @@ footer {
         margin-bottom: 2rem; // Agrega margen inferior
         text-align: center;  // Centra horizontalmente el texto
     }
-}
 
-#marca_diferencia {
-    padding-top: 1rem;
-    padding-bottom: 3rem;
-}
-
-// Imagen de fondo
-.imagen-fondo {
-    background-image: url('img/index/imgFondo.png');
-    opacity: 0.7;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 300px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @media (max-width: 768px) {
-        height: 200px;
-    }
-}
-
-@media (max-width: 1300px) {
-    .info .row {
-        flex-direction: column; /* Cambia la dirección de los elementos a columna */
-        align-items: center;   /* Centra los elementos */
+    .row {
+        @media (max-width: 1300px) {
+            flex-direction: column; /* Cambia la dirección de los elementos a columna */
+            align-items: center;   /* Centra los elementos */
+        }
     }
 
-    .info .col-md-6 {
-        width: 100%; /* Hace que los elementos ocupen todo el ancho de la columna */
-        margin-bottom: 20px; /* Añade un pequeño espacio entre el video y el texto */
+    .col-md-6 {
+        @media (max-width: 1300px) {
+            width: 100%; /* Hace que los elementos ocupen todo el ancho de la columna */
+            margin-bottom: 20px; /* Añade un pequeño espacio entre el video y el texto */
+        }
     }
 
-    .info iframe {
-        width: 100% !important; /* Asegura que el iframe ocupe todo el ancho de la pantalla */
-        height: 300px; /* Ajusta la altura según prefieras */
+    iframe {
+        @media (max-width: 1300px) {
+            width: 100% !important; /* Asegura que el iframe ocupe todo el ancho de la pantalla */
+            height: 300px; /* Ajusta la altura según prefieras */
+        }
+
+        @media (min-width: 1300px) {
+            width: 80%; /* Ajusta el tamaño del video para que no ocupe todo el ancho */
+            max-height: 500px; /* Ajusta la altura máxima para evitar desproporciones */
+            margin-top: 3em; /* Espacio debajo del video */
+        }
     }
 
-    .info h2, .info p {
-        text-align: center; /* Centra el texto */
-    }
-}
-
-// Ajuste para pantallas grandes Video de YouTube (1300px o más)
-@media (min-width: 1300px) {
-.info iframe {
-    width: 80%; /* Ajusta el tamaño del video para que no ocupe todo el ancho */
-    max-height: 500px; /* Ajusta la altura máxima para evitar desproporciones */
-    margin-top: 3em; /* Espacio debajo del video */
-    }
-}
-
-// Ajuste específico para pantallas de 1300px o menores, donde el video irá arriba y el texto abajo
-@media (max-width: 1300px) {
-    .info {
+    @media (max-width: 1300px) {
         display: flex;
         flex-direction: column; /* Cambia la dirección de los elementos */
         align-items: center; /* Centra los elementos */
+
+        iframe {
+            order: -1; /* Coloca el video arriba */
+        }
     }
 
-    .info iframe {
-        order: -1; /* Coloca el video arriba */
+    h2, p {
+        @media (max-width: 1300px) {
+            text-align: center; /* Centra el texto */
+        }
     }
 }
 
