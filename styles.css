@@ -3,214 +3,212 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  padding-top: 70px;
-  /* Espacio suficiente para que el contenido no quede debajo del navbar */ }
+  padding-top: 70px; /* Espacio suficiente para que el contenido no quede debajo del navbar */
+}
 
 header a, footer a, .nav-link {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 header {
-  position: fixed;
-  /* Hace que el navbar esté fijo */
-  top: 0;
-  /* Lo coloca en la parte superior de la página */
+  position: fixed; /* Hace que el navbar esté fijo */
+  top: 0; /* Lo coloca en la parte superior de la página */
   left: 0;
-  width: 100%;
-  /* Asegura que ocupe todo el ancho de la pantalla */
-  z-index: 1000;
-  /* Asegura que el navbar se quede por encima de otros elementos */
-  background-color: #fff;
-  /* Establece un fondo blanco, para que no se mezcle con el contenido */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* Añade una sombra ligera para darle un efecto de separación */ }
-  header .logo {
-    width: 140px;
-    padding-left: 5%;
-    padding-right: 10%; }
-  header .nav-link {
-    color: #28a745;
-    font-weight: bold; }
-    header .nav-link:hover {
-      text-decoration: underline; }
+  width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+  z-index: 1000; /* Asegura que el navbar se quede por encima de otros elementos */
+  background-color: #fff; /* Establece un fondo blanco, para que no se mezcle con el contenido */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para darle un efecto de separación */
+}
+header .logo {
+  width: 140px;
+  padding-left: 5%;
+  padding-right: 10%;
+}
+header .nav-link {
+  color: #28a745;
+  font-weight: bold;
+}
+header .nav-link:hover {
+  text-decoration: underline;
+}
 
 .nav-link {
-  color: #28a745;
-  /* Color del enlace normal */ }
-  .nav-link:hover {
-    text-decoration: underline; }
-  .nav-link:visited {
-    color: #28a745;
-    /* Mantiene el color después de haber sido visitado */ }
-  .nav-link:active {
-    color: black;
-    /* Color del enlace cuando está activo (clickeado) */ }
+  color: #28a745; /* Color del enlace normal */
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+.nav-link:visited {
+  color: #28a745; /* Mantiene el color después de haber sido visitado */
+}
+.nav-link:active {
+  color: black; /* Color del enlace cuando está activo (clickeado) */
+}
 
 h1, h2, h3, h4, h5, h6 {
-  color: #051564; }
+  color: #051564;
+}
 
 .hero {
   padding: 1rem;
-  text-align: center; }
-  .hero h1 {
-    color: #051564;
-    font-size: 2rem; }
+  text-align: center;
+}
+.hero h1 {
+  color: #051564;
+  font-size: 2rem;
+}
+.hero .img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: center; /* Centra las imágenes verticalmente */
+  overflow: hidden; /* Oculta las imágenes que excedan el área */
+  width: 100%; /* Se ajusta al contenedor */
+  height: 500px; /* Fija una altura para que las imágenes no sobresalgan */
+  position: relative; /* Necesario para manejar el contenido dentro de este contenedor */
+}
+.hero .img-container img {
+  width: 500px; /* Establece el tamaño de las imágenes a 500x500px */
+  height: 500px; /* Asegura que las imágenes tengan el tamaño deseado */
+  -o-object-fit: cover;
+     object-fit: cover; /* Asegura que las imágenes llenen el contenedor sin distorsionarse */
+  opacity: 0; /* Hace que las imágenes estén inicialmente invisibles */
+  transition: opacity 2s ease-in-out; /* Transición suave de opacidad */
+  position: absolute; /* Asegura que las imágenes no afecten el flujo normal del documento */
+  top: 0; /* Coloca las imágenes en la parte superior del contenedor */
+  left: 50%; /* Centra las imágenes horizontalmente */
+  transform: translateX(-50%); /* Centra las imágenes exactamente en el medio */
+}
+.hero .img-container img.fade-in {
+  opacity: 1; /* Hace que la imagen con clase fade-in sea visible */
+}
+.hero .hero .img-container img {
+  position: absolute; /* Coloca las imágenes una encima de la otra */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0; /* Oculta todas las imágenes inicialmente */
+  transition: opacity 1s ease-in-out; /* Añade una transición suave */
+}
+.hero .hero .img-container img.fade-in {
+  opacity: 1; /* Hace visible la imagen activa */
+  z-index: 1; /* Asegura que la imagen activa esté encima */
+}
+@media (max-width: 768px) {
+  .hero {
+    /* Opcional: espacio adicional para el texto */
+  }
   .hero .img-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /* Centra las imágenes horizontalmente */
-    align-items: center;
-    /* Centra las imágenes verticalmente */
-    overflow: hidden;
-    /* Oculta las imágenes que excedan el área */
-    width: 100%;
-    /* Se ajusta al contenedor */
-    height: 500px;
-    /* Fija una altura para que las imágenes no sobresalgan */
-    position: relative;
-    /* Necesario para manejar el contenido dentro de este contenedor */ }
-    .hero .img-container img {
-      width: 500px;
-      /* Establece el tamaño de las imágenes a 500x500px */
-      height: 500px;
-      /* Asegura que las imágenes tengan el tamaño deseado */
-      object-fit: cover;
-      /* Asegura que las imágenes llenen el contenedor sin distorsionarse */
-      opacity: 0;
-      /* Hace que las imágenes estén inicialmente invisibles */
-      transition: opacity 2s ease-in-out;
-      /* Transición suave de opacidad */
-      position: absolute;
-      /* Asegura que las imágenes no afecten el flujo normal del documento */
-      top: 0;
-      /* Coloca las imágenes en la parte superior del contenedor */
-      left: 50%;
-      /* Centra las imágenes horizontalmente */
-      transform: translateX(-50%);
-      /* Centra las imágenes exactamente en el medio */ }
-      .hero .img-container img.fade-in {
-        opacity: 1;
-        /* Hace que la imagen con clase fade-in sea visible */ }
-  .hero .hero .img-container img {
-    position: absolute;
-    /* Coloca las imágenes una encima de la otra */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    /* Oculta todas las imágenes inicialmente */
-    transition: opacity 1s ease-in-out;
-    /* Añade una transición suave */ }
-  .hero .hero .img-container img.fade-in {
-    opacity: 1;
-    /* Hace visible la imagen activa */
-    z-index: 1;
-    /* Asegura que la imagen activa esté encima */ }
-  @media (max-width: 768px) {
-    .hero {
-      /* Opcional: espacio adicional para el texto */ }
-      .hero .img-container {
-        height: 300px;
-        /* Ajustamos la altura del contenedor */ }
-        .hero .img-container img {
-          width: 300px;
-          /* Reducimos el tamaño */
-          height: 300px;
-          /* Mantiene la proporción */ }
-      .hero .col-md-6 {
-        margin-bottom: 20px;
-        /* Espacio adicional para tablets */ } }
-  @media (max-width: 576px) {
-    .hero .img-container {
-      height: 275px; }
-      .hero .img-container img {
-        width: 275px; } }
+    height: 300px; /* Ajustamos la altura del contenedor */
+  }
+  .hero .img-container img {
+    width: 300px; /* Reducimos el tamaño */
+    height: 300px; /* Mantiene la proporción */
+  }
   .hero .col-md-6 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Centra el contenido dentro de la columna */
-    align-items: flex-start;
-    /* Alinea el texto al inicio */
-    height: auto;
-    /* Ajusta la altura al contenido */
-    margin-bottom: 30px;
-    /* Asegura que haya un pequeño espacio entre el texto y la imagen */ }
+    margin-bottom: 20px; /* Espacio adicional para tablets */
+  }
+}
+@media (max-width: 576px) {
+  .hero .img-container {
+    height: 275px;
+  }
+  .hero .img-container img {
+    width: 275px;
+  }
+}
+.hero .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido dentro de la columna */
+  align-items: flex-start; /* Alinea el texto al inicio */
+  height: auto; /* Ajusta la altura al contenido */
+  margin-bottom: 30px; /* Asegura que haya un pequeño espacio entre el texto y la imagen */
+}
 
 #info_intro {
-  padding-top: 25px; }
+  padding-top: 25px;
+}
 
 #info_detalle {
   margin-left: 5%;
-  margin-right: 5%; }
+  margin-right: 5%;
+}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 footer {
   padding: 1rem;
-  background-color: #397747; }
-  footer h5 {
-    color: #28a745; }
+  background-color: #397747;
+}
+footer h5 {
+  color: #28a745;
+}
 
 .info h2 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  text-align: center; }
+  text-align: center;
+}
 @media (max-width: 1300px) {
   .info .row {
-    flex-direction: column;
-    /* Cambia la dirección de los elementos a columna */
-    align-items: center;
-    /* Centra los elementos */ } }
+    flex-direction: column; /* Cambia la dirección de los elementos a columna */
+    align-items: center; /* Centra los elementos */
+  }
+}
 @media (max-width: 1300px) {
   .info .col-md-6 {
-    width: 100%;
-    /* Hace que los elementos ocupen todo el ancho de la columna */
-    margin-bottom: 20px;
-    /* Añade un pequeño espacio entre el video y el texto */ } }
+    width: 100%; /* Hace que los elementos ocupen todo el ancho de la columna */
+    margin-bottom: 20px; /* Añade un pequeño espacio entre el video y el texto */
+  }
+}
 @media (max-width: 1300px) {
   .info iframe {
-    width: 100% !important;
-    /* Asegura que el iframe ocupe todo el ancho de la pantalla */
-    height: 300px;
-    /* Ajusta la altura según prefieras */ } }
+    width: 100% !important; /* Asegura que el iframe ocupe todo el ancho de la pantalla */
+    height: 300px; /* Ajusta la altura según prefieras */
+  }
+}
 @media (min-width: 1300px) {
   .info iframe {
-    width: 80%;
-    /* Ajusta el tamaño del video para que no ocupe todo el ancho */
-    max-height: 500px;
-    /* Ajusta la altura máxima para evitar desproporciones */
-    margin-top: 3em;
-    /* Espacio debajo del video */ } }
+    width: 80%; /* Ajusta el tamaño del video para que no ocupe todo el ancho */
+    max-height: 500px; /* Ajusta la altura máxima para evitar desproporciones */
+    margin-top: 3em; /* Espacio debajo del video */
+  }
+}
 @media (max-width: 1300px) {
   .info {
     display: flex;
-    flex-direction: column;
-    /* Cambia la dirección de los elementos */
-    align-items: center;
-    /* Centra los elementos */ }
-    .info iframe {
-      order: -1;
-      /* Coloca el video arriba */ } }
+    flex-direction: column; /* Cambia la dirección de los elementos */
+    align-items: center; /* Centra los elementos */
+  }
+  .info iframe {
+    order: -1; /* Coloca el video arriba */
+  }
+}
 @media (max-width: 1300px) {
   .info h2, .info p {
-    text-align: center;
-    /* Centra el texto */ } }
+    text-align: center; /* Centra el texto */
+  }
+}
 
 .form-control,
 .form-select {
-  border: 1px solid #28a745; }
-  .form-control:focus,
-  .form-select:focus {
-    border-color: #1e7e34;
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
+  border: 1px solid #28a745;
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: #1e7e34;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
 
 .contacto-title, #titulo_2_index {
-  color: #28a745; }
+  color: #28a745;
+}
 
 .contacto-subtitle {
   color: #051564;
@@ -218,71 +216,95 @@ footer {
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
-  line-height: 1.5; }
+  line-height: 1.5;
+}
 
-.contacto-icon img {
+.icono-imagen {
   max-width: 40px;
   height: auto;
-  margin: 0 auto; }
+  margin-right: 10px;
+  vertical-align: middle;
+}
 
+.contact-text {
+  color: #000;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .contacto-icon-container {
+    padding-top: 3rem;
+  }
+}
 .roboto-thin {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
-  font-style: normal; }
+  font-style: normal;
+}
 
 .roboto-light {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-style: normal; }
+  font-style: normal;
+}
 
 .roboto-regular {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-style: normal; }
+  font-style: normal;
+}
 
 .roboto-medium {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-style: normal; }
+  font-style: normal;
+}
 
 .roboto-bold {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-style: normal; }
+  font-style: normal;
+}
 
 .roboto-black {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
-  font-style: normal; }
+  font-style: normal;
+}
 
 .roboto-thin-italic {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .roboto-light-italic {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .roboto-regular-italic {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .roboto-medium-italic {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .roboto-bold-italic {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .roboto-black-italic {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
-  font-style: italic; }
-
-/*# sourceMappingURL=styles.css.map */
+  font-style: italic;
+}/*# sourceMappingURL=styles.css.map */
