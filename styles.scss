@@ -348,11 +348,28 @@ form {
     line-height: 1.5
 }
 
-.contacto-icon img {
+.icono-imagen {
     max-width: 40px; 
-    height: auto;  
-    margin: 0 auto; 
+    height: auto; 
+    margin-right: 10px; 
+    vertical-align: middle; 
 }
+
+.contact-text {
+    color: #000; 
+    font-weight: 900; 
+    font-size: 1.2rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .contacto-icon-container {
+        padding-top: 3rem; 
+        // en mobile aniado padding superior al contenedor
+    }
+}
+
 
 // Tipografías Roboto
 .roboto-thin { font-family: $font-family; font-weight: 100; font-style: normal; }
