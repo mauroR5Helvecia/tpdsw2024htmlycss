@@ -145,9 +145,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 5%;
   margin-right: 5%; }
 
+h2.text-center.fw-bold.mb-4 {
+  padding-top: 1rem;
+  padding-bottom: 2rem; }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: rgba(0, 0, 0, 0.5); }
+
+h2.text-blue {
+  color: #28a745; }
 
 .imagen-fondo {
   background-image: url("img/index/imgFondo.png");
@@ -223,6 +230,27 @@ form select {
     border-color: #1e7e34;
     outline: none; }
 
+#formulario_cursos {
+  border: 2px solid green;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: grey;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+
+@media (min-width: 768px) {
+  #formulario_cursos {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%; } }
+@media (max-width: 768px) {
+  #formulario_cursos {
+    margin-left: 10%;
+    margin-right: 10%; } }
+@media (min-width: 1200px) {
+  #formulario_cursos {
+    width: 50%; } }
 .form-control,
 .form-select {
   border: 1px solid #28a745; }
