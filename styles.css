@@ -222,6 +222,19 @@ footer {
     text-align: center;
     /* Centra el texto */ } }
 
+#titular_cursos {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  font-weight: bold; }
+
+#subtitulos_cursos {
+  font-style: italic;
+  padding-bottom: 2rem; }
+
+#ventajas_cursos {
+  padding-top: 2rem;
+  padding-bottom: 3rem; }
+
 form input,
 form select {
   border: 1px solid #28a745; }
