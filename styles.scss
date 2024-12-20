@@ -167,6 +167,21 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.imagen-fondo {
+    background-image: url("img/index/imgFondo.png");
+    opacity: 0.7;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media (max-width: 768px) {
+      .imagen-fondo {
+        height: 200px; } }
+  
 // Footer Styles
 footer {
     padding: $default-padding;
@@ -232,6 +247,19 @@ footer {
 // Estilos pagina cursos 
 
 $primary-color: #28a745;
+
+// FORMULARIO
+
+form {
+  input, 
+  select {
+    border: 1px solid $primary-color;
+    &:focus {
+      border-color: darken($primary-color, 10%);
+      outline: none;
+    }
+  }
+}
 
 .form-control,
 .form-select {

@@ -149,6 +149,21 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-control-next-icon {
   background-color: rgba(0, 0, 0, 0.5); }
 
+.imagen-fondo {
+  background-image: url("img/index/imgFondo.png");
+  opacity: 0.7;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+@media (max-width: 768px) {
+  .imagen-fondo {
+    height: 200px; } }
 footer {
   padding: 1rem;
   background-color: #397747; }
@@ -199,6 +214,14 @@ footer {
   .info h2, .info p {
     text-align: center;
     /* Centra el texto */ } }
+
+form input,
+form select {
+  border: 1px solid #28a745; }
+  form input:focus,
+  form select:focus {
+    border-color: #1e7e34;
+    outline: none; }
 
 .form-control,
 .form-select {
