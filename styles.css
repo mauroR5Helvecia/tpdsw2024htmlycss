@@ -2,9 +2,11 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  padding-top: 70px;
+  /* Espacio suficiente para que el contenido no quede debajo del navbar */ }
 
-header a, footer a {
+header a, footer a, .nav-link {
   text-decoration: none; }
 
 header {
@@ -21,33 +23,19 @@ header {
   /* Establece un fondo blanco, para que no se mezcle con el contenido */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   /* Añade una sombra ligera para darle un efecto de separación */ }
-
-body {
-  padding-top: 70px;
-  /* Espacio suficiente para que el contenido no quede debajo del navbar */ }
-
-.nav-link {
-  text-decoration: none; }
-  .nav-link:hover {
-    text-decoration: none; }
-
-h1, h2, h3, h4, h5, h6 {
-  color: #051564; }
-
-header .logo {
-  width: 140px;
-  padding-left: 5%;
-  padding-right: 10%; }
-header .nav-link {
-  color: #28a745;
-  font-weight: bold; }
-  header .nav-link:hover {
-    text-decoration: underline; }
+  header .logo {
+    width: 140px;
+    padding-left: 5%;
+    padding-right: 10%; }
+  header .nav-link {
+    color: #28a745;
+    font-weight: bold; }
+    header .nav-link:hover {
+      text-decoration: underline; }
 
 .nav-link {
   color: #28a745;
-  /* Color del enlace normal */
-  text-decoration: none; }
+  /* Color del enlace normal */ }
   .nav-link:hover {
     text-decoration: underline; }
   .nav-link:visited {
@@ -57,120 +45,98 @@ header .nav-link {
     color: black;
     /* Color del enlace cuando está activo (clickeado) */ }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #051564; }
+
 .hero {
   padding: 1rem;
   text-align: center; }
   .hero h1 {
     color: #051564;
     font-size: 2rem; }
-
-/* Estilo para las imágenes dentro del contenedor .img-container */
-.hero .img-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  /* Centra las imágenes horizontalmente */
-  align-items: center;
-  /* Centra las imágenes verticalmente */
-  overflow: hidden;
-  /* Oculta las imágenes que excedan el área */
-  width: 100%;
-  /* Se ajusta al contenedor */ }
-
-.hero .img-container img {
-  object-fit: cover;
-  /* Mantiene la proporción de las imágenes */
-  opacity: 0;
-  /* Hace que las imágenes estén inicialmente invisibles */
-  transition: opacity 2s ease-in-out;
-  /* Transición suave de opacidad */ }
-
-.hero .img-container img.fade-in {
-  opacity: 1;
-  /* Hace que la imagen con clase fade-in sea visible */ }
-
-/* Estilo para las imágenes dentro del contenedor .img-container */
-.hero .img-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  /* Centra las imágenes horizontalmente */
-  align-items: center;
-  /* Centra las imágenes verticalmente */
-  overflow: hidden;
-  /* Oculta cualquier parte de la imagen que sobresalga */
-  width: 100%;
-  /* Se ajusta al 100% del contenedor padre */
-  height: 500px;
-  /* Fija una altura para que las imágenes no sobresalgan */
-  position: relative;
-  /* Necesario para manejar el contenido dentro de este contenedor */ }
-
-/* Estilo de las imágenes */
-.hero .img-container img {
-  width: 500px;
-  /* Establece el tamaño de las imágenes a 500x500px */
-  height: 500px;
-  /* Asegura que las imágenes tengan el tamaño deseado */
-  object-fit: cover;
-  /* Asegura que las imágenes llenen el contenedor sin distorsionarse */
-  opacity: 0;
-  /* Hace que las imágenes estén inicialmente invisibles */
-  transition: opacity 2s ease-in-out;
-  /* Transición suave de opacidad */
-  position: absolute;
-  /* Asegura que las imágenes no afecten el flujo normal del documento */
-  top: 0;
-  /* Coloca las imágenes en la parte superior del contenedor */
-  left: 50%;
-  /* Centra las imágenes horizontalmente */
-  transform: translateX(-50%);
-  /* Centra las imágenes exactamente en el medio */ }
-
-/* Imagen activa con la clase fade-in */
-.hero .img-container img.fade-in {
-  opacity: 1;
-  /* Hace que la imagen con clase fade-in sea visible */ }
-
-/* Ajustes para tablets y pantallas más pequeñas */
-@media (max-width: 768px) {
-  .hero .img-container img {
-    width: 300px;
-    /* Reducimos el tamaño */
-    height: 300px;
-    /* Mantiene la proporción */
-    object-fit: cover;
-    /* Asegura que no se deformen */ }
-
-  /* Ajustamos el contenedor de imágenes */
   .hero .img-container {
-    height: 300px;
-    /* Ajustamos la altura del contenedor */ }
-
-  /* Opcional: espacio adicional para el texto */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* Centra las imágenes horizontalmente */
+    align-items: center;
+    /* Centra las imágenes verticalmente */
+    overflow: hidden;
+    /* Oculta las imágenes que excedan el área */
+    width: 100%;
+    /* Se ajusta al contenedor */
+    height: 500px;
+    /* Fija una altura para que las imágenes no sobresalgan */
+    position: relative;
+    /* Necesario para manejar el contenido dentro de este contenedor */ }
+    .hero .img-container img {
+      width: 500px;
+      /* Establece el tamaño de las imágenes a 500x500px */
+      height: 500px;
+      /* Asegura que las imágenes tengan el tamaño deseado */
+      object-fit: cover;
+      /* Asegura que las imágenes llenen el contenedor sin distorsionarse */
+      opacity: 0;
+      /* Hace que las imágenes estén inicialmente invisibles */
+      transition: opacity 2s ease-in-out;
+      /* Transición suave de opacidad */
+      position: absolute;
+      /* Asegura que las imágenes no afecten el flujo normal del documento */
+      top: 0;
+      /* Coloca las imágenes en la parte superior del contenedor */
+      left: 50%;
+      /* Centra las imágenes horizontalmente */
+      transform: translateX(-50%);
+      /* Centra las imágenes exactamente en el medio */ }
+      .hero .img-container img.fade-in {
+        opacity: 1;
+        /* Hace que la imagen con clase fade-in sea visible */ }
+  .hero .hero .img-container img {
+    position: absolute;
+    /* Coloca las imágenes una encima de la otra */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    /* Oculta todas las imágenes inicialmente */
+    transition: opacity 1s ease-in-out;
+    /* Añade una transición suave */ }
+  .hero .hero .img-container img.fade-in {
+    opacity: 1;
+    /* Hace visible la imagen activa */
+    z-index: 1;
+    /* Asegura que la imagen activa esté encima */ }
+  @media (max-width: 768px) {
+    .hero {
+      /* Opcional: espacio adicional para el texto */ }
+      .hero .img-container {
+        height: 300px;
+        /* Ajustamos la altura del contenedor */ }
+        .hero .img-container img {
+          width: 300px;
+          /* Reducimos el tamaño */
+          height: 300px;
+          /* Mantiene la proporción */ }
+      .hero .col-md-6 {
+        margin-bottom: 20px;
+        /* Espacio adicional para tablets */ } }
+  @media (max-width: 576px) {
+    .hero .img-container {
+      height: 275px; }
+      .hero .img-container img {
+        width: 275px; } }
   .hero .col-md-6 {
-    margin-bottom: 20px;
-    /* Espacio adicional para tablets */ } }
-/* Ajustes para pantallas aún más pequeñas (opcional, móviles) */
-@media (max-width: 576px) {
-  .hero .img-container img {
-    width: 275px;
-    object-fit: cover; }
-
-  .hero .img-container {
-    height: 275px; } }
-/* Estilos para el contenedor de texto */
-.hero .col-md-6 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* Centra el contenido dentro de la columna */
-  align-items: flex-start;
-  /* Alinea el texto al inicio */
-  height: auto;
-  /* Ajusta la altura al contenido */
-  margin-bottom: 30px;
-  /* Asegura que haya un pequeño espacio entre el texto y la imagen */ }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centra el contenido dentro de la columna */
+    align-items: flex-start;
+    /* Alinea el texto al inicio */
+    height: auto;
+    /* Ajusta la altura al contenido */
+    margin-bottom: 30px;
+    /* Asegura que haya un pequeño espacio entre el texto y la imagen */ }
 
 #info_intro {
   padding-top: 25px; }
@@ -193,48 +159,24 @@ footer {
   margin-top: 2rem;
   margin-bottom: 2rem;
   text-align: center; }
-
-#marca_diferencia {
-  padding-top: 1rem;
-  padding-bottom: 3rem; }
-
-.imagen-fondo {
-  background-image: url("img/index/imgFondo.png");
-  opacity: 0.7;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 300px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  @media (max-width: 768px) {
-    .imagen-fondo {
-      height: 200px; } }
-
 @media (max-width: 1300px) {
   .info .row {
     flex-direction: column;
     /* Cambia la dirección de los elementos a columna */
     align-items: center;
-    /* Centra los elementos */ }
-
+    /* Centra los elementos */ } }
+@media (max-width: 1300px) {
   .info .col-md-6 {
     width: 100%;
     /* Hace que los elementos ocupen todo el ancho de la columna */
     margin-bottom: 20px;
-    /* Añade un pequeño espacio entre el video y el texto */ }
-
+    /* Añade un pequeño espacio entre el video y el texto */ } }
+@media (max-width: 1300px) {
   .info iframe {
     width: 100% !important;
     /* Asegura que el iframe ocupe todo el ancho de la pantalla */
     height: 300px;
-    /* Ajusta la altura según prefieras */ }
-
-  .info h2, .info p {
-    text-align: center;
-    /* Centra el texto */ } }
+    /* Ajusta la altura según prefieras */ } }
 @media (min-width: 1300px) {
   .info iframe {
     width: 80%;
@@ -250,10 +192,23 @@ footer {
     /* Cambia la dirección de los elementos */
     align-items: center;
     /* Centra los elementos */ }
+    .info iframe {
+      order: -1;
+      /* Coloca el video arriba */ } }
+@media (max-width: 1300px) {
+  .info h2, .info p {
+    text-align: center;
+    /* Centra el texto */ } }
 
-  .info iframe {
-    order: -1;
-    /* Coloca el video arriba */ } }
+.form-control,
+.form-select {
+  border: 1px solid #28a745; }
+  .form-control:focus,
+  .form-select:focus {
+    border-color: #1e7e34;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
+
 .contacto-title, #titulo_2_index {
   color: #28a745; }
 

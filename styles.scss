@@ -229,6 +229,21 @@ footer {
     }
 }
 
+// Estilos pagina cursos 
+
+$primary-color: #28a745;
+
+.form-control,
+.form-select {
+  border: 1px solid $primary-color;
+
+  &:focus {
+    border-color: darken($primary-color, 10%);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25); // Efecto visual de Bootstrap
+  }
+}
+
 // Estilos pagina contacto
 
 .contacto-title, #titulo_2_index {
