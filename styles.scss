@@ -277,6 +277,26 @@ $primary-color: #28a745;
     padding-bottom: 3rem; 
 }
 
+// Imagenes ventajas
+.fade-in {
+    width: 100%; // Asegura que la imagen sea responsiva
+    object-fit: cover; // Mantiene proporciones y recorta exceso si es necesario
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) { // Rango específico de 768px a 991px
+    .fade-in {
+      height: 300px; // Establece la misma altura para todas las imágenes
+      object-fit: cover; // Recorta el exceso para que se ajusten
+    }
+  }
+
+  // Subtitulos imagenes
+
+  .detalle_capacitaciones {
+    color: $primary-color;
+    margin-bottom: 2rem; // Ajusta el valor según lo que necesites
+  }
+
 // FORMULARIO
 
 form {

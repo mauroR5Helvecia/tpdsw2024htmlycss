@@ -229,11 +229,24 @@ footer {
 
 #subtitulos_cursos {
   font-style: italic;
+  font-size: larger;
   padding-bottom: 2rem; }
 
 #ventajas_cursos {
   padding-top: 2rem;
-  padding-bottom: 3rem; }
+  padding-bottom: 2rem; }
+
+.fade-in {
+  width: 100%;
+  object-fit: cover; }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .fade-in {
+    height: 300px;
+    object-fit: cover; } }
+.detalle_capacitaciones {
+  color: #28a745;
+  margin-bottom: 2rem; }
 
 form input,
 form select {
