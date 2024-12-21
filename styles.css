@@ -224,17 +224,24 @@ footer {
 
 #titular_cursos {
   padding-top: 3rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   font-weight: bold; }
 
-#subtitulos_cursos {
+#subtitulos_cursos1, #subtitulos_cursos2 {
   font-style: italic;
-  font-size: larger;
-  padding-bottom: 2rem; }
+  padding-bottom: 2rem;
+  font-size: larger; }
+
+#subtitulos_cursos1 {
+  color: #051564; }
+
+#subtitulos_cursos2 {
+  color: #397747; }
 
 #ventajas_cursos {
   padding-top: 2rem;
-  padding-bottom: 2rem; }
+  padding-bottom: 2rem;
+  font-weight: bold; }
 
 .fade-in {
   width: 100%;
@@ -247,6 +254,14 @@ footer {
 .detalle_capacitaciones {
   color: #28a745;
   margin-bottom: 2rem; }
+
+#titular_acordeon {
+  padding-top: 2rem;
+  padding-bottom: 1rem; }
+
+.accordion-button {
+  color: #051564 !important;
+  font-weight: bold; }
 
 form input,
 form select {

@@ -263,18 +263,28 @@ $primary-color: #28a745;
 // TITULAR CURSOS
 #titular_cursos {
     padding-top: 3rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;  
     font-weight: bold;
   }
 
-#subtitulos_cursos{
+#subtitulos_cursos1, #subtitulos_cursos2 {
     font-style: italic;
     padding-bottom: 2rem;
+    font-size: larger;
+}
+
+#subtitulos_cursos1 {
+    color: $dark-blue;
+}
+
+#subtitulos_cursos2 {
+    color: $secondary-color;
 }
 
 #ventajas_cursos{
     padding-top: 2rem;
-    padding-bottom: 3rem; 
+    padding-bottom: 2rem;
+    font-weight: bold;
 }
 
 // Imagenes ventajas
@@ -296,6 +306,21 @@ $primary-color: #28a745;
     color: $primary-color;
     margin-bottom: 2rem; // Ajusta el valor según lo que necesites
   }
+
+// TITULAR ACORDEON
+
+#titular_acordeon {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+// BOTONES DEL ACORDEON
+
+.accordion-button {
+    color: $dark-blue !important; // Azul predeterminado de Bootstrap.
+    font-weight: bold;
+  }
+  
 
 // FORMULARIO
 
