@@ -38,3 +38,36 @@ document.addEventListener("DOMContentLoaded", function() {
         showImage(currentIndex); // Mostrar la imagen correspondiente
     }, 4000); // Cada 4 segundos
 });
+
+
+// Modal de las paginas cursos
+document.getElementById('submitButton').addEventListener('click', function () {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const course = document.getElementById('course').value.trim();
+
+    if (!name || !email || !course) {
+      const errorModal = new bootstrap.Modal(document.getElementById('statusErrorsModal'));
+      errorModal.show();
+    } else {
+      const successModal = new bootstrap.Modal(document.getElementById('statusSuccessModal'));
+      successModal.show();
+
+      let countdown = 10;
+      const timer = setInterval(function () {
+        countdown--;
+        document.getElementById('redirectTimer').innerText = countdown;
+
+        if (countdown === 0) {
+          clearInterval(timer);
+          window.location.href = 'index.html'; // Redirección al index
+        }
+      }, 1000);
+    }
+  });
+
+   // Función para redirigir al index - Boton OK de registro con exito
+   function irAlIndex() {
+    window.location.href = "index.html"; // Cambia "index.html"
+  }
+  
