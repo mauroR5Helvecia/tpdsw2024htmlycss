@@ -1,20 +1,9 @@
-// VENTANA EN CONSTRUCCION
-document.addEventListener("DOMContentLoaded", function() {
-    // Seleccionamos el enlace de la calculadora
-    const calculadoraLink = document.getElementById("enContruccion-link");
-
-    // Comprobamos si el enlace existe
-    if (calculadoraLink) {
-        // Añadimos el evento de clic al enlace
-        calculadoraLink.addEventListener("click", function(event) {
-            // Prevenimos que el enlace realice su acción (abrir otra página)
-            event.preventDefault();
-            
-            // Mostramos la ventana emergente
-            alert("¡Esta parte del sitio está en construcción!");
-        });
-    }
-});
+// VENTANA CALCULADORA EN CONSTRUCCION
+document.getElementById('enContruccion-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevenir la acción predeterminada del enlace
+    var myModal = new bootstrap.Modal(document.getElementById('constructionModal'));
+    myModal.show(); // Mostrar el modal
+  });  
 
 // Transición de imágenes en la sección hero
 document.addEventListener("DOMContentLoaded", function() {

@@ -64,6 +64,17 @@ h1, h2, h3, h4, h5, h6 {
     color: $dark-blue;
 }
 
+// VENTANA MODAL CALCULADORA EN CONSTRUCCION
+.modal-content {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .modal-header {
+    background-color: yellow;
+    color: white;
+  }
+
 // Hero Section
 .hero {
     padding: $default-padding;
