@@ -404,6 +404,8 @@ form {
     line-height: 1.5
 }
 
+// sectiopn contacto dos imagenes
+
 .icono-imagen {
     max-width: 40px; 
     height: auto; 
@@ -418,6 +420,67 @@ form {
 }
 
 
+// ---------------------------------------------------------------------------------
+
+// formulario contacto
+
+.form-container {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #121212;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4caf0b; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 11, 0.5);
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf0b; 
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #388e3c; 
+}
+
 
 @media (max-width: 768px) {
     .contacto-icon-container {
@@ -425,6 +488,49 @@ form {
         // en mobile aniado padding superior al contenedor
     }
 }
+
+
+// section contacto, para validaciones estilos
+.error-message {
+    color: #c20010; 
+    font-size: 12px;
+    margin-top: 5px;
+    display: none; 
+}
+
+input.error, textarea.error {
+    border-color: #c20010; 
+}
+
+input.success, textarea.success {
+    border-color: #4caf0b; 
+}
+
+
+
+// mensaje exitoso 
+.success-msj {
+    background-color: #4caf0b; 
+    color: #ffffff;
+    margin-top: 9px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px #00000033;
+    font-size: 16px;
+    text-align: center;
+    display: none; 
+}
+
+// seccion contacto mapa
+.map-container {
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+// --------------------------------------------------------------------------
 
 
 // Tipografías Roboto
