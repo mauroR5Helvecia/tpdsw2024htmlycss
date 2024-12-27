@@ -389,6 +389,20 @@ form {
   }
 }
 
+#emailError {
+    display: none;
+  }
+
+  /* Mostrar el mensaje cuando el campo es inválido */
+  input:invalid + #emailError {
+    display: block;
+  }
+
+  /* Ocultar el mensaje cuando el campo es válido */
+  input:valid + #emailError {
+    display: none;
+  }
+
 // Estilos pagina contacto
 
 .contacto-title, #titulo_2_index {
