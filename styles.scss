@@ -271,6 +271,72 @@ footer {
 
 $primary-color: #28a745;
 
+section.container {
+    position: relative; // Contexto para la imagen y el texto
+    padding-bottom: 2rem; // Espaciado adicional al final
+  
+    // Estilo del texto para mantener estructura limpia (opcional)
+    h2,
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .ocultar {
+        opacity: 0; // Oculta inicialmente el elemento
+        transform: translateY(20px); // Añade un efecto de desplazamiento
+      }
+      
+      .titulo-animado,
+      .subtitulo-animado,
+      .parrafo-animado {
+        animation: aparecer 1s ease-in-out forwards; // Aparecerá con animación
+      }
+      
+      .titulo-animado {
+        animation-delay: 1s; // Retraso de 3 segundos
+      }
+      
+      .subtitulo-animado {
+        animation-delay: 1.2s; // Retraso adicional para el subtítulo
+      }
+      
+      .parrafo-animado {
+        animation-delay: 1.4s; // Retraso adicional para los párrafos
+      }
+      
+      @keyframes aparecer {
+        0% {
+          opacity: 0;
+          transform: translateY(20px); // Empieza con un ligero desplazamiento
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0); // Termina en su posición original
+        }
+      }      
+  
+    .imagen-posicionada {
+      display: block; // Asegura que sea un elemento en bloque
+      margin: 2rem auto 0; // Centra la imagen horizontalmente y da espacio superior
+      width: 80%; // Tamaño para pantallas grandes
+      height: auto; // Mantiene la proporción de la imagen
+      opacity: 0.8; // Opacidad del 80%
+  
+      // Media queries para tamaños de pantalla
+      @media (max-width: 992px) { // Pantallas medianas (tablets)
+        width: 80%;
+      }
+  
+      @media (max-width: 768px) { // Pantallas pequeñas (celulares)
+        width: 500px;
+      }
+  
+      @media (max-width: 576px) { // Pantallas extra pequeñas
+        width:400px;
+      }
+    }
+  }  
+  
 // TITULAR CURSOS
 #titular_cursos {
     padding-top: 3rem;

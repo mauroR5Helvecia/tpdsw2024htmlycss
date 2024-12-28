@@ -230,6 +230,48 @@ footer {
     text-align: center;
     /* Centra el texto */ } }
 
+section.container {
+  position: relative;
+  padding-bottom: 2rem; }
+  section.container h2,
+  section.container p {
+    margin-bottom: 1rem; }
+  section.container .ocultar {
+    opacity: 0;
+    transform: translateY(20px); }
+  section.container .titulo-animado,
+  section.container .subtitulo-animado,
+  section.container .parrafo-animado {
+    animation: aparecer 1s ease-in-out forwards; }
+  section.container .titulo-animado {
+    animation-delay: 1s; }
+  section.container .subtitulo-animado {
+    animation-delay: 1.2s; }
+  section.container .parrafo-animado {
+    animation-delay: 1.4s; }
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+  section.container .imagen-posicionada {
+    display: block;
+    margin: 2rem auto 0;
+    width: 80%;
+    height: auto;
+    opacity: 0.8; }
+    @media (max-width: 992px) {
+      section.container .imagen-posicionada {
+        width: 80%; } }
+    @media (max-width: 768px) {
+      section.container .imagen-posicionada {
+        width: 500px; } }
+    @media (max-width: 576px) {
+      section.container .imagen-posicionada {
+        width: 400px; } }
+
 #titular_cursos {
   padding-top: 3rem;
   padding-bottom: 2rem;
