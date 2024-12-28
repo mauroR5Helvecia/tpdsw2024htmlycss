@@ -12,7 +12,7 @@ body {
     font-family: $font-family;
     margin: 0;
     padding: 0;
-    padding-top: 70px; /* Espacio suficiente para que el contenido no quede debajo del navbar */
+    padding-top: 70px; 
 }
 
 header a, footer a, .nav-link {
@@ -20,13 +20,13 @@ header a, footer a, .nav-link {
 }
 
 header {
-    position: fixed;  /* Hace que el navbar esté fijo */
-    top: 0;           /* Lo coloca en la parte superior de la página */
+    position: fixed; 
+    top: 0;          
     left: 0;
-    width: 100%;      /* Asegura que ocupe todo el ancho de la pantalla */
-    z-index: 1000;    /* Asegura que el navbar se quede por encima de otros elementos */
-    background-color: #fff; /* Establece un fondo blanco, para que no se mezcle con el contenido */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para darle un efecto de separación */
+    width: 100%;     
+    z-index: 1000;   
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 
     .logo {
         width: 140px;
@@ -36,7 +36,7 @@ header {
 
     .nav-link {
         color: $primary-color;
-        font-weight: bold; // Ya está en "fw-bold" del HTML
+        font-weight: bold; 
         &:hover {
             text-decoration: underline;
         }
@@ -44,18 +44,18 @@ header {
 }
 
 .nav-link {
-    color: $primary-color;  /* Color del enlace normal */
+    color: $primary-color;
     
     &:hover {
         text-decoration: underline;
     }
 
     &:visited {
-        color: $primary-color; /* Mantiene el color después de haber sido visitado */
+        color: $primary-color; 
     }
-
+// cuando se daclick en el nav
     &:active {
-        color: black; /* Color del enlace cuando está activo (clickeado) */
+        color: black;
     }
 }
 
@@ -88,58 +88,58 @@ h1, h2, h3, h4, h5, h6 {
     .img-container {
         display: flex;
         flex-direction: row;
-        justify-content: center; /* Centra las imágenes horizontalmente */
-        align-items: center; /* Centra las imágenes verticalmente */
-        overflow: hidden; /* Oculta las imágenes que excedan el área */
-        width: 100%; /* Se ajusta al contenedor */
-        height: 500px; /* Fija una altura para que las imágenes no sobresalgan */
-        position: relative; /* Necesario para manejar el contenido dentro de este contenedor */
+        justify-content: center;
+        align-items: center; 
+        overflow: hidden; 
+        width: 100%; 
+        height: 500px; 
+        position: relative; 
 
         img {
-            width: 500px; /* Establece el tamaño de las imágenes a 500x500px */
-            height: 500px; /* Asegura que las imágenes tengan el tamaño deseado */
-            object-fit: cover; /* Asegura que las imágenes llenen el contenedor sin distorsionarse */
-            opacity: 0; /* Hace que las imágenes estén inicialmente invisibles */
-            transition: opacity 2s ease-in-out; /* Transición suave de opacidad */
-            position: absolute; /* Asegura que las imágenes no afecten el flujo normal del documento */
-            top: 0; /* Coloca las imágenes en la parte superior del contenedor */
-            left: 50%; /* Centra las imágenes horizontalmente */
-            transform: translateX(-50%); /* Centra las imágenes exactamente en el medio */
+            width: 500px; 
+            height: 500px; 
+            object-fit: cover; 
+            opacity: 0; 
+            transition: opacity 2s ease-in-out; 
+            position: absolute; 
+            top: 0; 
+            left: 50%; 
+            transform: translateX(-50%);
 
             &.fade-in {
-                opacity: 1; /* Hace que la imagen con clase fade-in sea visible */
+                opacity: 1; 
             }
         }
     }
 
     .hero .img-container img {
-        position: absolute; /* Coloca las imágenes una encima de la otra */
+        position: absolute; 
         top: 0;
         left: 0;
         width: 100%;
         height: auto;
-        opacity: 0; /* Oculta todas las imágenes inicialmente */
-        transition: opacity 1s ease-in-out; /* Añade una transición suave */
+        opacity: 0; 
+        transition: opacity 1s ease-in-out;
       }
       
       .hero .img-container img.fade-in {
-        opacity: 1; /* Hace visible la imagen activa */
-        z-index: 1; /* Asegura que la imagen activa esté encima */
+        opacity: 1; 
+        z-index: 1; 
       }      
 
     @media (max-width: 768px) {
         .img-container {
-            height: 300px; /* Ajustamos la altura del contenedor */
+            height: 300px; 
 
             img {
-                width: 300px; /* Reducimos el tamaño */
-                height: 300px; /* Mantiene la proporción */
+                width: 300px; 
+                height: 300px;
             }
         }
 
-        /* Opcional: espacio adicional para el texto */
+        
         .col-md-6 {
-            margin-bottom: 20px; /* Espacio adicional para tablets */
+            margin-bottom: 20px; 
         }
     }
 
@@ -156,10 +156,10 @@ h1, h2, h3, h4, h5, h6 {
     .col-md-6 {
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Centra el contenido dentro de la columna */
-        align-items: flex-start; /* Alinea el texto al inicio */
-        height: auto; /* Ajusta la altura al contenido */
-        margin-bottom: 30px; /* Asegura que haya un pequeño espacio entre el texto y la imagen */
+        justify-content: center; 
+        align-items: flex-start; 
+        height: auto; 
+        margin-bottom: 30px; 
     }
 }
 
@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 
   img {
-    max-height: 300px; // Asegura que la imagen no sea demasiado grande
+    max-height: 300px; 
     object-fit: cover;
   }
 
@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 // Titulos PRODUCTOS QUE MARCAN LA DIFERENCIA
 h2.text-center.fw-bold.mb-4 {
     padding-top: 1rem;
-    padding-bottom: 2rem; // Ajusta este valor según sea necesario
+    padding-bottom: 2rem; 
   }
 
 // Carousel Customizations
@@ -235,120 +235,120 @@ footer {
 // Título con espaciado centrado
 .info {
     h2 {
-        margin-top: 2rem;    // Agrega margen superior
-        margin-bottom: 2rem; // Agrega margen inferior
-        text-align: center;  // Centra horizontalmente el texto
+        margin-top: 2rem;    
+        margin-bottom: 2rem;
+        text-align: center; 
     }
 
     .row {
         @media (max-width: 1300px) {
-            flex-direction: column; /* Cambia la dirección de los elementos a columna */
-            align-items: center;   /* Centra los elementos */
+            flex-direction: column; 
+            align-items: center;  
         }
     }
 
     .col-md-6 {
         @media (max-width: 1300px) {
-            width: 100%; /* Hace que los elementos ocupen todo el ancho de la columna */
-            margin-bottom: 20px; /* Añade un pequeño espacio entre el video y el texto */
+            width: 100%; 
+            margin-bottom: 20px; 
         }
     }
 
     iframe {
         @media (max-width: 1300px) {
-            width: 100% !important; /* Asegura que el iframe ocupe todo el ancho de la pantalla */
-            height: 300px; /* Ajusta la altura según prefieras */
+            width: 100% !important; 
+            height: 300px;
         }
 
         @media (min-width: 1300px) {
-            width: 80%; /* Ajusta el tamaño del video para que no ocupe todo el ancho */
-            max-height: 500px; /* Ajusta la altura máxima para evitar desproporciones */
-            margin-top: 3em; /* Espacio debajo del video */
+            width: 80%; 
+            max-height: 500px; 
+            margin-top: 3em; 
         }
     }
 
     @media (max-width: 1300px) {
         display: flex;
-        flex-direction: column; /* Cambia la dirección de los elementos */
-        align-items: center; /* Centra los elementos */
+        flex-direction: column; 
+        align-items: center; 
 
         iframe {
-            order: -1; /* Coloca el video arriba */
+            order: -1; 
         }
     }
 
     h2, p {
         @media (max-width: 1300px) {
-            text-align: center; /* Centra el texto */
+            text-align: center; 
         }
     }
 }
+// --------------------------------------------------------------------------
 
 // Estilos pagina cursos 
 
-$primary-color: #28a745;
 
 section.container {
-    position: relative; // Contexto para la imagen y el texto
-    padding-bottom: 2rem; // Espaciado adicional al final
+    position: relative; 
+    padding-bottom: 2rem; 
   
-    // Estilo del texto para mantener estructura limpia (opcional)
+    // Estilo del texto para mantener estructura limpia
     h2,
     p {
       margin-bottom: 1rem;
     }
 
     .ocultar {
-        opacity: 0; // Oculta inicialmente el elemento
-        transform: translateY(20px); // Añade un efecto de desplazamiento
+        opacity: 0;
+        transform: translateY(20px); 
       }
       
       .titulo-animado,
       .subtitulo-animado,
       .parrafo-animado {
-        animation: aparecer 1s ease-in-out forwards; // Aparecerá con animación
+        animation: aparecer 1s ease-in-out forwards;
       }
       
       .titulo-animado {
-        animation-delay: 1s; // Retraso de 3 segundos
+        animation-delay: 1s; 
       }
       
       .subtitulo-animado {
-        animation-delay: 1.2s; // Retraso adicional para el subtítulo
+        animation-delay: 1.2s; 
       }
       
       .parrafo-animado {
-        animation-delay: 1.4s; // Retraso adicional para los párrafos
+        animation-delay: 1.4s; 
       }
       
       @keyframes aparecer {
         0% {
           opacity: 0;
-          transform: translateY(20px); // Empieza con un ligero desplazamiento
+          transform: translateY(20px);
         }
         100% {
           opacity: 1;
-          transform: translateY(0); // Termina en su posición original
+          transform: translateY(0); 
         }
       }      
   
     .imagen-posicionada {
-      display: block; // Asegura que sea un elemento en bloque
-      margin: 2rem auto 0; // Centra la imagen horizontalmente y da espacio superior
-      width: 80%; // Tamaño para pantallas grandes
-      height: auto; // Mantiene la proporción de la imagen
-      opacity: 0.8; // Opacidad del 80%
+      display: block; 
+      margin: 2rem auto 0; 
+      width: 80%; 
+      height: auto; 
+      opacity: 0.8; 
   
       // Media queries para tamaños de pantalla
-      @media (max-width: 992px) { // Pantallas medianas (tablets)
+      @media (max-width: 992px) { 
         width: 80%;
       }
   
-      @media (max-width: 768px) { // Pantallas pequeñas (celulares)
+      @media (max-width: 768px) { 
         width: 500px;
       }
   
-      @media (max-width: 576px) { // Pantallas extra pequeñas
+      @media (max-width: 576px) { 
         width:400px;
       }
     }
@@ -383,14 +383,14 @@ section.container {
 
 // Imagenes ventajas
 .fade-in {
-    width: 100%; // Asegura que la imagen sea responsiva
-    object-fit: cover; // Mantiene proporciones y recorta exceso si es necesario
+    width: 100%; 
+    object-fit: cover; 
   }
   
-  @media (min-width: 768px) and (max-width: 991px) { // Rango específico de 768px a 991px
+  @media (min-width: 768px) and (max-width: 991px) { 
     .fade-in {
-      height: 300px; // Establece la misma altura para todas las imágenes
-      object-fit: cover; // Recorta el exceso para que se ajusten
+      height: 300px;
+      object-fit: cover; 
     }
   }
 
@@ -398,7 +398,7 @@ section.container {
 
   .detalle_capacitaciones {
     color: $primary-color;
-    margin-bottom: 2rem; // Ajusta el valor según lo que necesites
+    margin-bottom: 2rem; 
   }
 
 // TITULAR ACORDEON
@@ -411,7 +411,7 @@ section.container {
 // BOTONES DEL ACORDEON
 
 .accordion-button {
-    color: $dark-blue !important; // Azul predeterminado de Bootstrap.
+    color: $dark-blue !important;
     font-weight: bold;
   }
   
@@ -436,7 +436,7 @@ form {
     background-color: grey;
     margin-top: 1rem;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra suave
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
   
   @media (min-width: 768px) {
@@ -468,7 +468,7 @@ form {
   &:focus {
     border-color: darken($primary-color, 10%);
     outline: none;
-    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25); // Efecto visual de Bootstrap
+    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25); 
   }
 }
 
@@ -476,15 +476,17 @@ form {
     display: none;
   }
 
-  /* Mostrar el mensaje cuando el campo es inválido */
+//  Mostrar el mensaje cuando el campo es inválido 
   input:invalid + #emailError {
     display: block;
   }
 
-  /* Ocultar el mensaje cuando el campo es válido */
+//    Ocultar el mensaje cuando el campo es válido 
   input:valid + #emailError {
     display: none;
   }
+
+//   --------------------------------------------------------------
 
 // Estilos pagina contacto
 
