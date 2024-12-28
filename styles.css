@@ -153,6 +153,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 5%;
   margin-right: 5%; }
 
+.modal-content {
+  border-radius: 1rem;
+  overflow: hidden; }
+  .modal-content img {
+    max-height: 300px;
+    object-fit: cover; }
+  .modal-content .btn-lg {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem; }
+
 h2.text-center.fw-bold.mb-4 {
   padding-top: 1rem;
   padding-bottom: 2rem; }

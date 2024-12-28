@@ -28,6 +28,21 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 4000); // Cada 4 segundos
 });
 
+// Modal contacto en INDEX
+
+document.addEventListener("scroll", function onScroll() {
+    const productosSection = document.getElementById("reflexion");
+    const modal = new bootstrap.Modal(document.getElementById("contactoModal"));
+  
+    const sectionPosition = productosSection.getBoundingClientRect();
+    const isSectionVisible = sectionPosition.top < window.innerHeight && sectionPosition.bottom > 0;
+  
+    if (isSectionVisible) {
+      modal.show();
+      document.removeEventListener("scroll", onScroll); // Eliminar el evento de scroll
+    }
+  });  
+
 // Modal de las paginas cursos
 document.getElementById('submitButton').addEventListener('click', function () {
     const name = document.getElementById('name').value.trim();

@@ -172,6 +172,23 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 5%;
 }
 
+// MODAL CONTACTO INDEX
+
+.modal-content {
+  border-radius: 1rem;
+  overflow: hidden;
+
+  img {
+    max-height: 300px; // Asegura que la imagen no sea demasiado grande
+    object-fit: cover;
+  }
+
+  .btn-lg {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
 // Titulos PRODUCTOS QUE MARCAN LA DIFERENCIA
 h2.text-center.fw-bold.mb-4 {
     padding-top: 1rem;
